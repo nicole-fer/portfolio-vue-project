@@ -1,3 +1,3 @@
 <template>
-    <div>Contato</div>
+    <div class="my-64">Contato</div>
 </template>

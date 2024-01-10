@@ -7,7 +7,7 @@ const props = defineProps({
 <template>
         <div :class=" darkMode==true ? 'border-t-4 border-pink-500 bg-gray-800 sm:pr-20 pr-4  sm:grid grid-cols-7 sm:place-content-between' : 'bg-pink-100  sm:pr-20 pr-4  sm:grid grid-cols-7  sm:place-content-between text-gray-800 border-t-4 border-pink-500'">
             <div class="flex place-items-end  sm:col-span-3">
-                <img class="sm:mt-16 w-full" src="../../assets/img/imagem.png"/>
+                <img class="sm:mt-16 w-11/12" src="../../assets/img/imagem.png"/>
             </div>
             <div class="sm:col-span-4">
                <div class="sm:mt-48">

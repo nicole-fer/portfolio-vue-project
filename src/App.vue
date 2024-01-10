@@ -57,7 +57,7 @@ const chageTheme = () =>  {
       </div>
     <main id="scroll-container">
      <Sobre class="scroll-page" id="main" :darkMode="darkMode"/>
-     <About class="scroll-page" id="sobre"/>
+     <About class="scroll-page" id="sobre" :darkMode="darkMode"/>
      <Experiencias class="scroll-page" id="experiencias"/>
      <Contato class="scroll-page" id="contatos"/>
     </main>

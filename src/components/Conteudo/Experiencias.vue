@@ -6,20 +6,20 @@ const props = defineProps({
 
 <template>
     <div
-        :class="darkMode == true ? 'bg-gray-900 py-32 border-t-4 border-pink-500' : 'bg-gradient-to-b from-gray-200 to-pink-300 py-32 border-t-4 border-pink-500'">
-        <div class="mb-16">
-            <p :class="darkMode==true ? 'sm:pl-32 text-3xl text-pink-500 font-mono' : 'sm:pl-32 text-3xl text-pink-700 font-mono'">Experiencias</p>
+        :class="darkMode == true ? 'px-4 bg-gray-900 sm:py-32 py-6 border-t-4 border-pink-500' : 'px-4 bg-gradient-to-b py-6 from-gray-200 to-pink-300 sm:py-32 border-t-4 border-pink-500'">
+        <div class="sm:mb-16 mb-6">
+            <p :class="darkMode==true ? 'sm:pl-32 sm:text-3xl text-xl text-pink-500 font-mono' : 'sm:pl-32 text-xl sm:text-3xl text-pink-700 font-mono'">Experiencias</p>
         </div>
-        <div class="flex justify-between sm:mx-52">
+        <div class="sm:flex sm:justify-between sm:mx-52">
             <div>
                 <div>
                     <div
-                        :class="darkMode == false ? 'block max-w-sm p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : 'block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
+                        :class="darkMode == false ? 'block max-w-sm sm:w-full w-11/12 p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : ' sm:w-full w-11/12  block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
                         <h5
-                            :class="darkMode == true ? 'mb-2 text-2xl font-bold tracking-tight text-white' : 'mb-2 text-2xl font-bold tracking-tight text-white'">
+                            :class="darkMode == true ? 'mb-2 sm:text-2xl text-lg font-bold tracking-tight text-white' : 'mb-2 text-lg sm:text-2xl font-bold tracking-tight text-white'">
                             Prefeitura Municipal de Sobral
                         </h5>
-                        <p :class="darkMode == true ? 'font-normal text-gray-400' : 'font-normal text-blue-100'">
+                        <p :class="darkMode == true ? 'font-normal text-sm sm:text-base text-gray-400' : 'text-sm sm:text-base font-normal text-blue-100'">
                             Here are the biggest enterprise technology acquisitions of 2021 so
                             far, in reverse chronological order.
                         </p>
@@ -72,10 +72,10 @@ const props = defineProps({
                         </ul>
                     </div>
                 </div>
-                <div class="pt-48">
+                <div class="sm:pt-48 mt-12 pb-6">
                     <div>
                         <div
-                            :class="darkMode == false ? 'block max-w-sm p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : 'block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
+                        :class="darkMode == false ? 'block max-w-sm sm:w-full w-11/12 p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : ' sm:w-full w-11/12  block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
                             <h5
                                 :class="darkMode == true ? 'mb-2 text-2xl font-bold tracking-tight text-white' : 'mb-2 text-2xl font-bold tracking-tight text-white'">
                                 Grupo PluralMed
@@ -134,9 +134,9 @@ const props = defineProps({
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="sm:block hidden">
                 <ol class="relative border-s border-pink-200 dark:border-gray-700">
-                    <li class="mb-10 ms-4 pb-40">
+                    <li class="mb-10 ms-4 sm:pb-40 pb-6">
                         <div
                             class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                         </div>
@@ -147,7 +147,7 @@ const props = defineProps({
                             Estágio em Engenharia da Computação
                         </h3>
                     </li>
-                    <li class="mb-10 ms-4 pb-28">
+                    <li class="mb-28 ms-4 pb-40">
                         <div
                             class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                         </div>
@@ -172,9 +172,9 @@ const props = defineProps({
                 </ol>
             </div>
             <!-- Experiencia lado Direito -->
-            <div class="pt-48">
+            <div class="sm:pt-48 pt-4 pb-6">
                 <div
-                    :class="darkMode == false ? 'block max-w-sm p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : 'block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
+                :class="darkMode == false ? 'block max-w-sm sm:w-full w-11/12 p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : ' sm:w-full w-11/12  block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
                     <h5
                         :class="darkMode == true ? 'mb-2 text-2xl font-bold tracking-tight text-white' : 'mb-2 text-2xl font-bold tracking-tight text-white'">
                         GREAT

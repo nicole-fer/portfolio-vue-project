@@ -5,13 +5,14 @@ const props = defineProps({
 </script>
 
 <template>
-    <div
-        :class="darkMode == true ? 'px-4 bg-gray-900 sm:py-32 py-6 border-t-4 border-pink-500' : 'px-4 bg-gradient-to-b py-6 from-gray-200 to-pink-300 sm:py-32 border-t-4 border-pink-500'">
-        <div class="sm:mb-16 mb-6">
+    <div :class="darkMode == true ? ' bg-gray-900 border-t-4 border-pink-500 sm:py-24 py-6': ' sm:py-24 py-6 bg-gradient-to-b py-6 from-gray-200 to-pink-300  border-t-4 border-pink-500'">
+        <div class="sm:mb-10 mb-6">
             <p :class="darkMode==true ? 'sm:pl-32 sm:text-3xl text-xl text-pink-500 font-mono' : 'sm:pl-32 text-xl sm:text-3xl text-pink-700 font-mono'">Experiencias</p>
         </div>
-        <div class="sm:flex sm:justify-between sm:mx-52">
-            <div>
+        <div
+        :class="darkMode == true ? 'px-4  flex justify-center' : 'flex justify-center px-4 '">
+        <div class="sm:flex sm:justify-between sm:w-fit gap-5">
+            <div class="sm:w-2/5">
                 <div>
                     <div
                         :class="darkMode == false ? 'block max-w-sm sm:w-full w-11/12 p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : ' sm:w-full w-11/12  block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
@@ -27,7 +28,7 @@ const props = defineProps({
                     <div>
                         <p :class="darkMode == true ? 'text-pink-400 my-3' : 'my-3 text-gray-700'">Tecnologias usadas:</p>
                         <ul
-                            :class="darkMode == false ? 'flex gap-5 mt-3 bg-gray-200 border border-pink-400 px-5 pt-4 pb-2 rounded-md' : 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md'">
+                            :class="darkMode == false ? 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md' : 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md'">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512">
                                     <path fill="#FFD43B"
@@ -89,7 +90,7 @@ const props = defineProps({
                     <div>
                         <p class="text-pink-400 my-3">Tecnologias usadas:</p>
                         <ul
-                            :class="darkMode == false ? 'flex gap-5 mt-3 bg-gray-200 border border-pink-400 px-5 pt-4 pb-2 rounded-md' : 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md'">
+                            :class="darkMode == false ? 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md' : 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md'">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512">
                                     <path fill="#FFD43B"
@@ -134,7 +135,7 @@ const props = defineProps({
                     </div>
                 </div>
             </div>
-            <div class="sm:block hidden">
+            <div class="sm:block hidden sm:w-1/5">
                 <ol class="relative border-s border-pink-200 dark:border-gray-700">
                     <li class="mb-10 ms-4 sm:pb-40 pb-6">
                         <div
@@ -172,7 +173,7 @@ const props = defineProps({
                 </ol>
             </div>
             <!-- Experiencia lado Direito -->
-            <div class="sm:pt-48 pt-4 pb-6">
+            <div class="pt-4 pb-6 sm:w-2/5">
                 <div
                 :class="darkMode == false ? 'block max-w-sm sm:w-full w-11/12 p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : ' sm:w-full w-11/12  block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
                     <h5
@@ -187,7 +188,7 @@ const props = defineProps({
                 <div>
                     <p class="text-pink-400 my-3">Tecnologias usadas:</p>
                     <ul
-                        :class="darkMode == false ? 'flex gap-5 mt-3 bg-gray-200 border border-pink-400 px-5 pt-4 pb-2 rounded-md' : 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md'">
+                        :class="darkMode == false ? 'flex gap-5 mt-3  px-5 pt-4 pb-2 rounded-md' : 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md'">
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512">
                                 <path fill="#FFD43B"
@@ -222,4 +223,6 @@ const props = defineProps({
             </div>
         </div>
     </div>
-</div></template>
+</div>
+    </div>
+   </template>

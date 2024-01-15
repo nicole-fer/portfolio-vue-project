@@ -28,7 +28,7 @@ const props = defineProps({
                         </p>
                     </div>
                     <div>
-                        <p :class="darkMode == true ? 'text-pink-400 my-3 pl-2 sm:pl-0' : 'my-3 text-gray-700 pl-2 sm:pl-0'">{{ propsLanguage.exp.tec
+                        <p :class="darkMode == true ? 'text-pink-400 my-3 pl-3 sm:pl-0' : 'my-3 text-gray-700 pl-3 sm:pl-0'">{{ propsLanguage.exp.tec
                         }}</p>
                         <ul
                             :class="darkMode == false ? 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md' : 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md'">

@@ -147,7 +147,7 @@ function showPage() {
     <div>
       <header>
         <nav
-          :class="darkMode == true ? 'border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 border-b-pink-500   border-b-2' : 'border-gray-200 px-4 lg:px-6 py-2.5 bg-pink-100 border-b-pink-500   border-b-2'">
+          :class="darkMode == true ? 'border-gray-200 px-4 lg:px-6 py-2.5 bg-gray-800 border-b-pink-500 border-b-2' : 'border-gray-200 px-4 lg:px-6 py-2.5 bg-pink-100 border-b-pink-500   border-b-2'">
           <div class="  py-3 flex flex-wrap justify-between items-center mx-auto sm:px-8 px-2">
             <a href="/" class="flex items-center">
               <img src="./assets/img/logo.png" class="mr-3 h-8 sm:h-16" alt="Logo" />
@@ -188,14 +188,14 @@ function showPage() {
             <div class="flex sm:hidden">
               <div class="animate-bottom">
                   <div @click="chageTheme()"
-                    :class="darkMode == true ? 'block py-2 pr-4 pl-3 text-gray-700  lg:border-0 lg:p-0 dark:text-gray-400 text-2xl lg:dark:hover:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent' : 'block py-2 pr-4 pl-3 text-gray-700  lg:border-0 lg:p-0 lg:hover:bg-transparent hover:bg-gray-50 hover:text-blue-700 text-2xl'">
-                    <MoonIcon v-if="darkMode == false" class="text-black w-8 h-8  cursor-pointer" />
+                    :class="darkMode == true ? 'block py-2 pr-4 pl-3  lg:border-0 lg:p-0 text-gray-400 text-2xl lg:hover:text-white border-gray-700' : 'block py-2 pr-4 pl-3  lg:border-0 lg:p-0 text-2xl text-pink-600'">
+                    <MoonIcon v-if="darkMode == false" class="text-pink-600 w-8 h-8  cursor-pointer" />
                     <SunIcon v-if="darkMode == true" class="text-pink-500 w-8 h-8  cursor-pointer" />
                   </div>
                 </div>
                 <div class="animate-bottom">
                   <div @click="chageLanguage()"
-                    :class="darkMode == true ? 'block py-2 pr-4 pl-3 text-gray-700  lg:border-0 lg:p-0 dark:text-gray-400 text-2xl lg:dark:hover:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent' : 'block py-2 pr-4 pl-3 text-gray-700  lg:border-0 lg:p-0 lg:hover:bg-transparent hover:bg-gray-50 hover:text-blue-700 text-2xl'">
+                    :class="darkMode == true ? 'block py-2 pr-4 pl-3  lg:border-0 lg:p-0 text-pink-500 text-2xl  dark:border-gray-700 ' : 'block py-2 pr-4 pl-3  lg:border-0 lg:p-0 text-2xl text-pink-600 font-semibold'">
                     <p v-if="language == true" class="cursor-pointer">EN</p>
                     <p v-else class="cursor-pointer">POR</p>
                   </div>

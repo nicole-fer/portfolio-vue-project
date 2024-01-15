@@ -9,7 +9,7 @@ console.log(props.propsLanguage)
 
 <template>
   <div>
-    <div  :class="darkMode == true ? 'grid grid-cols-5  text-white sm:h-screen py-10 sm:py-0 bg-gradient-to-b from-gray-800 to-cyan-800' : 'bg-gradient-to-b from-pink-100 to-pink-200  grid grid-cols-5 h-screen'">
+    <div  :class="darkMode == true ? 'grid grid-cols-5  text-white sm:h-screen py-10 sm:py-0 bg-gradient-to-b from-gray-800 to-cyan-800' : 'bg-gradient-to-b from-pink-100 to-pink-200  grid grid-cols-5 sm:h-screen py-10'">
       <div class="sm:px-8	flex place-items-center sm:col-span-3 col-span-5 sm:mr-12 px-4">
           <div class="sm:-mt-32">
               <p  :class=" darkMode==true  ? 'animate-bottom box sm:text-7xl text-4xl font-mono font-medium text-pink-400' : 'box sm:text-7xl text-4xl font-mono font-medium text-pink-600'">{{ propsLanguage.sobre.nome }}</p>

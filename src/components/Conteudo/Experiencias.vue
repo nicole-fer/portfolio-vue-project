@@ -1,6 +1,7 @@
 <script setup>
 const props = defineProps({
     darkMode: Boolean,
+    propsLanguage: Object,
 })
 </script>
 
@@ -18,15 +19,14 @@ const props = defineProps({
                         :class="darkMode == false ? 'block max-w-sm sm:w-full w-11/12 p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : ' sm:w-full w-11/12  block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
                         <h5
                             :class="darkMode == true ? 'mb-2 sm:text-2xl text-lg font-bold tracking-tight text-white' : 'mb-2 text-lg sm:text-2xl font-bold tracking-tight text-white'">
-                            Prefeitura Municipal de Sobral
+                            {{ propsLanguage.exp.exps[0].titulo }}
                         </h5>
-                        <p :class="darkMode == true ? 'font-normal text-sm sm:text-base text-gray-400' : 'text-sm sm:text-base font-normal text-blue-100'">
-                            Here are the biggest enterprise technology acquisitions of 2021 so
-                            far, in reverse chronological order.
+                        <p :class="darkMode == true ? 'font-normal text-sm sm:text-base text-gray-400 text-justify' : 'text-justify text-sm sm:text-base font-normal text-blue-100'">
+                            {{ propsLanguage.exp.exps[0].descricao }}
                         </p>
                     </div>
                     <div>
-                        <p :class="darkMode == true ? 'text-pink-400 my-3' : 'my-3 text-gray-700'">Tecnologias usadas:</p>
+                        <p :class="darkMode == true ? 'text-pink-400 my-3' : 'my-3 text-gray-700'">{{ propsLanguage.exp.tec }}</p>
                         <ul
                             :class="darkMode == false ? 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md' : 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md'">
                             <li>
@@ -79,16 +79,15 @@ const props = defineProps({
                         :class="darkMode == false ? 'block max-w-sm sm:w-full w-11/12 p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : ' sm:w-full w-11/12  block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
                             <h5
                                 :class="darkMode == true ? 'mb-2 text-2xl font-bold tracking-tight text-white' : 'mb-2 text-2xl font-bold tracking-tight text-white'">
-                                Grupo PluralMed
+                                {{  propsLanguage.exp.exps[2].titulo }}
                             </h5>
-                            <p :class="darkMode == true ? 'font-normal text-gray-400' : 'font-normal text-blue-100'">
-                                Here are the biggest enterprise technology acquisitions of 2021 so
-                                far, in reverse chronological order.
+                            <p :class="darkMode == true ? 'font-normal text-gray-400 text-justify' : 'font-normal text-blue-100 text-justify'">
+                               {{  propsLanguage.exp.exps[2].descricao }}
                             </p>
                         </div>
                     </div>
                     <div>
-                        <p class="text-pink-400 my-3">Tecnologias usadas:</p>
+                        <p class="text-pink-400 my-3">{{  propsLanguage.exp.tec }}</p>
                         <ul
                             :class="darkMode == false ? 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md' : 'flex gap-5 mt-3 px-5 pt-4 pb-2 rounded-md'">
                             <li>
@@ -137,52 +136,48 @@ const props = defineProps({
             </div>
             <div class="sm:block hidden sm:w-1/5">
                 <ol class="relative border-s border-pink-200 dark:border-gray-700">
-                    <li class="mb-10 ms-4 sm:pb-40 pb-6">
+                    <li class="mb-10 ms-4 sm:pb-64 pb-6">
                         <div
                             class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                         </div>
-                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Maio
-                            2022</time>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{{ propsLanguage.exp.exps[0].data }}</time>
                         <h3
                             :class="darkMode == true ? 'text-lg font-semibold text-white' : 'text-lg font-semibold text-gray-900'">
-                            Estágio em Engenharia da Computação
+                            {{propsLanguage.exp.exps[0].atividade}}
                         </h3>
                     </li>
-                    <li class="mb-28 ms-4 pb-40">
+                    <li class="mb-28 ms-4 pb-24">
                         <div
                             class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                         </div>
-                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Outubro
-                            2022</time>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{{ propsLanguage.exp.exps[1].data }}</time>
                         <h3
                             :class="darkMode == true ? 'text-lg font-semibold text-white' : 'text-lg font-semibold text-gray-900'">
-                            Desenvolvedora Web - Frontend
+                            {{propsLanguage.exp.exps[1].atividade}}
                         </h3>
                     </li>
-                    <li class="ms-4 pb-32">
+                    <li class="ms-4 pb-96">
                         <div
                             class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                         </div>
-                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Julho
-                            2023</time>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{{ propsLanguage.exp.exps[2].data }}</time>
                         <h3
                             :class="darkMode == true ? 'text-lg font-semibold text-white' : 'text-lg font-semibold text-gray-900'">
-                            Desenvolvedora Web - Full Stack
+                            {{  propsLanguage.exp.exps[2].atividade }}
                         </h3>
                     </li>
                 </ol>
             </div>
             <!-- Experiencia lado Direito -->
-            <div class="pt-4 pb-6 sm:w-2/5">
+            <div class="pt-4 pb-6 sm:w-2/5 sm:mt-80">
                 <div
                 :class="darkMode == false ? 'block max-w-sm sm:w-full w-11/12 p-6 bg-pink-600 border border-pink-200 rounded-lg shadow ' : ' sm:w-full w-11/12  block max-w-sm p-6 border rounded-lg shadow bg-gray-800 border-gray-700 '">
                     <h5
                         :class="darkMode == true ? 'mb-2 text-2xl font-bold tracking-tight text-white' : 'mb-2 text-2xl font-bold tracking-tight text-white'">
-                        GREAT
+                        {{  propsLanguage.exp.exps[1].titulo }}
                     </h5>
                     <p :class="darkMode == true ? 'font-normal text-gray-400' : 'font-normal text-blue-100'">
-                        Here are the biggest enterprise technology acquisitions of 2021 so
-                        far, in reverse chronological order.
+                       {{  propsLanguage.exp.exps[1].descricao  }}
                     </p>
                 </div>
                 <div>

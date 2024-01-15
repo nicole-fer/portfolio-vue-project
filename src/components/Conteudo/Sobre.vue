@@ -1,16 +1,19 @@
 <script setup>
 const props = defineProps({
-    darkMode: Boolean
+    darkMode: Boolean,
+    propsLanguage: Object,
 })
+
+console.log(props.propsLanguage)
 </script>
 
 <template>
   <div>
     <div  :class="darkMode == true ? 'grid grid-cols-5  text-white sm:h-screen py-10 sm:py-0 bg-gradient-to-b from-gray-800 to-cyan-800' : 'bg-gradient-to-b from-pink-100 to-pink-200  grid grid-cols-5 h-screen'">
-        <div class="sm:px-8	flex place-items-center sm:col-span-3 col-span-5 sm:mr-12 px-4">
+      <div class="sm:px-8	flex place-items-center sm:col-span-3 col-span-5 sm:mr-12 px-4">
           <div class="sm:-mt-32">
-              <p  :class=" darkMode==true  ? 'animate-bottom box sm:text-7xl text-4xl font-mono font-medium text-pink-400' : 'box sm:text-7xl text-4xl font-mono font-medium text-pink-600'">Olá! Me chamo Nicole Fernandes</p>
-            <p :class="darkMode==true ? 'animate-p sm:text-2xl text-xl text-justify text-pink-200 pr-3 mt-5': 'sm:text-2xl mt-5 text-xl text-justify text-blue-950'">Sou desenvolvedora web e graduada em Engenharia da Computação pela Universidade Federal do Ceará (UFC). Seja bem vindo(a) ao meu portifólio.</p>
+              <p  :class=" darkMode==true  ? 'animate-bottom box sm:text-7xl text-4xl font-mono font-medium text-pink-400' : 'box sm:text-7xl text-4xl font-mono font-medium text-pink-600'">{{ propsLanguage.sobre.nome }}</p>
+            <p :class="darkMode==true ? 'animate-p sm:text-2xl text-xl text-justify text-pink-200 pr-3 mt-5': 'sm:text-2xl mt-5 text-xl text-justify text-blue-950'"> {{ propsLanguage.sobre.apresentacao }}</p>
           </div>
         </div>
         <div class="sm:-mt-12 place-items-center sm:col-span-2 flex justify-end sm:flex hidden">
